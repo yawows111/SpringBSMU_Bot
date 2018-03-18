@@ -5,7 +5,7 @@ import constants
 
 
 
-
+print("12321")
 bot = telebot.TeleBot("589935777:AAHYS__Ii5o90oKbNJWoF9oeilBTbruKh2g") #объект бот
 
 
