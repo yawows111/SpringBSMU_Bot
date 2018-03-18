@@ -29,20 +29,7 @@ def handle_start(message):
     user_markup.row('Голосовать за участников!')
     user_markup.row('Текущие состояние голосования!')
     user_markup.row('Информация о Боте.')
-    """"
-    # _______________________Конектица к базе данных
-    mySQLServer = "DESKTOP-02AVU8U\SQLEXPRESS"
-    myDatabase = "SpringVoting"
-    connection = pypyodbc.connect('Driver={SQL Server};'
-                                  'Server=' + mySQLServer + ';' 'Database=' + myDatabase + ';')
-    # ______________________________________________
-    cursor = connection.cursor()
-    cursor.execute("IF NOT EXISTS(SELECT UsersID FROM SpringVoting.dbo.UsersVote WHERE  UsersID='"+str(message.from_user.id)+"') INSERT INTO SpringVoting.dbo.UsersVote (UsersID,Vote) VALUES ('"+str(message.from_user.id)+"','0') ")  # добавление запроса
-    connection.commit()  # если добавляешь
-    connection.close()
-    # ________________________________________________закрытие бд
-    bot.send_message(message.from_user.id, 'Добро пожаловать..', reply_markup=user_markup)
-    """
+
 
 @bot.message_handler(content_types=['text'])
 def handle_menu(message):
