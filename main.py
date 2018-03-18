@@ -29,7 +29,7 @@ def handle_start(message):
     user_markup.row('Голосовать за участников!')
     user_markup.row('Текущие состояние голосования!')
     user_markup.row('Информация о Боте.')
-
+    """"
     # _______________________Конектица к базе данных
     mySQLServer = "DESKTOP-02AVU8U\SQLEXPRESS"
     myDatabase = "SpringVoting"
@@ -42,7 +42,7 @@ def handle_start(message):
     connection.close()
     # ________________________________________________закрытие бд
     bot.send_message(message.from_user.id, 'Добро пожаловать..', reply_markup=user_markup)
-
+    """
 
 @bot.message_handler(content_types=['text'])
 def handle_menu(message):
