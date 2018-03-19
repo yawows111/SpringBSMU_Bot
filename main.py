@@ -1,21 +1,7 @@
-# -*- coding: utf-8 -*-
+
 import telebot
-import constants
-
-
-
-
-# -*- coding: utf-8 -*-
-import telebot
-import constants
 import os
-
-
-
 import pypyodbc
-
-
-
 
 AllMember = ['Воздержались','1.Котик Л-303Б','2.Щенок С-201А','3.Птичка Л-101Б','4.Медведь С-413В'] ##//ДОБАВЛЯТЬ//
 Field_Vote = 0 # Проголосовал или нет
