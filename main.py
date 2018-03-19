@@ -3,8 +3,7 @@ import telebot
 import os
 import pypyodbc
 
-#AllMember = ['Воздержались','1.Котик Л-303Б','2.Щенок С-201А','3.Птичка Л-101Б','4.Медведь С-413В'] ##//ДОБАВЛЯТЬ//
-#Field_Vote = 0 # Проголосовал или нет
+
 
 bot = telebot.TeleBot('589935777:AAHYS__Ii5o90oKbNJWoF9oeilBTbruKh2g') #объект бот
 
@@ -21,5 +20,5 @@ def handle_start(message):
     bot.send_message(message.from_user.id, 'Добро пожаловать..', reply_markup=user_markup)
 
 
-bot.polling(none_stop=True) #обработка функций
+bot.polling(none_stop=True)
 
