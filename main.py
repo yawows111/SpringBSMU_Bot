@@ -33,7 +33,7 @@ def handle_start(message):
     user_markup.row('Голосовать за участников!')
     user_markup.row('Текущие состояние голосования!')
     user_markup.row('Информация о Боте.')
-
+    """
     # _______________________Конектица к базе данных
     mySQLServer = "eu-cdbr-west-02.cleardb.net"
     myDatabase = "heroku_7d29c9f1038ad30"
@@ -46,6 +46,7 @@ def handle_start(message):
     print(results)
     connection.close()
     # ________________________________________________закрытие бд
+    """
     bot.send_message(message.from_user.id, 'Добро пожаловать..', reply_markup=user_markup)
 
 
