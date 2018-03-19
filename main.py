@@ -44,8 +44,10 @@ def handle_start(message):
                                   'Server=' + mySQLServer + ';' 'Database=' + myDatabase + ';' 'uid=b596427b83010e;''pwd=ea86f59b;')
     # ______________________________________________
     cursor = connection.cursor()
-    cursor.execute("IF NOT EXISTS(SELECT UsersID FROM heroku_7d29c9f1038ad30.springvoting WHERE  UsersID='"+str(message.from_user.id)+"') INSERT INTO SpringVoting.dbo.UsersVote (UsersID,Vote) VALUES ('"+str(message.from_user.id)+"','0') ")  # добавление запроса
-    connection.commit()  # если добавляешь
+    cursor.execute("SELECT UsersID FROM heroku_7d29c9f1038ad30.springvoting WHERE UsersID = '2'")   # добавление запроса
+    #connection.commit()  # если добавляешь
+    results = cursor.fetchall()
+    print(results)
     connection.close()
     # ________________________________________________закрытие бд
     bot.send_message(message.from_user.id, 'Добро пожаловать..', reply_markup=user_markup)
