@@ -10,14 +10,11 @@ import telebot
 import constants
 import os
 
-import sys
-import logging
+
 
 import pypyodbc
 
-#cursor.execute(mySQLQuery)
-#infobase = cursor.fetchall()
-#print(infobase)
+
 
 
 AllMember = ['Воздержались','1.Котик Л-303Б','2.Щенок С-201А','3.Птичка Л-101Б','4.Медведь С-413В'] ##//ДОБАВЛЯТЬ//
@@ -40,8 +37,7 @@ def handle_start(message):
     # _______________________Конектица к базе данных
     mySQLServer = "eu-cdbr-west-02.cleardb.net"
     myDatabase = "heroku_7d29c9f1038ad30"
-    connection = pypyodbc.connect('Driver={SQL Server};'
-                                  'Server=' + mySQLServer + ';' 'Database=' + myDatabase + ';' 'uid=b596427b83010e;''pwd=ea86f59b;')
+    connection = pypyodbc.connect('Driver={ODBC Driver 13 for SQL Server}; Server=' + mySQLServer + '; Database=' + myDatabase + '; UID=b596427b83010e; PWD=ea86f59b;')
     # ______________________________________________
     cursor = connection.cursor()
     cursor.execute("SELECT UsersID FROM heroku_7d29c9f1038ad30.springvoting WHERE UsersID = '2'")   # добавление запроса
