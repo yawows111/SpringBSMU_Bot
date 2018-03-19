@@ -1,11 +1,10 @@
 
 import telebot
-import os
-import pypyodbc
 
 
 
-bot = telebot.TeleBot('589935777:AAHYS__Ii5o90oKbNJWoF9oeilBTbruKh2g') #объект бот
+
+bot = telebot.TeleBot('589935777:AAHYS__Ii5o90oKbNJWoF9oeilBTbruKh2g')
 
 @bot.message_handler(commands=['start'])
 def handle_start(message):
