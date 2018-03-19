@@ -1,6 +1,6 @@
 
 import telebot
-
+import pypyodbc
 
 
 
@@ -15,8 +15,6 @@ def handle_start(message):
     user_markup.row('Голосовать за участников!')
     user_markup.row('Текущие состояние голосования!')
     user_markup.row('Информация о Боте.')
-
-    bot.send_message(message.from_user.id, 'Добро пожаловать..', reply_markup=user_markup)
 
 
 bot.polling(none_stop=True)
